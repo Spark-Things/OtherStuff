@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript tutorials </title></head>
+<body>
+  <script>
+	 /*creating function					  
+	 function display(name1,name2)
+	 {
+	  document.write(arguments[1] + " ");
+	  document.write(arguments.length +" " + arguments[2] +"<br>");
+	  }
+	  //calling function
+	  display(12,30,55);
+	  
+	  //rest function
+	  function show(a,b, ...args)
+	  { document.write(args + "<br>");
+	    document.write(args[2])}
+	  show(10,20,30,40,50)
+	  
+	  
+	   //block scope
+	   if(true){
+	   let i=10;
+	   document.write(i + "<br>");
+	   }
+	   document.write(i + "<br>");
+
+	   
+	   //functions
+	     var a=20;
+		  function add(a,b)
+		  {  c = 75;
+		    document.write(c +"<br>");
+		  return(a+b);}
+		  document.write(add(a,10));
+		  document.write(c +"<br>"); 
+		  
+	  //closer
+		    function show(){
+			 var j = "j is a outer function";
+			 document.write(j +"<br>")
+			 function inn()
+			 { var k =" k is a inner function ";
+			 document.write(k +"<br>");
+			 document.write(j +"<br>");
+			 }
+			 inn();
+			 }
+			 show();
+			 
+	   //anonymous function
+	         function disp(a){
+			 return function(b){
+			         return a+b;
+			            };
+			 }
+			 var af =(disp(10));
+			 document.write(af(20)); 
+			 
+			 
+		//arrow function
+		      var myfun = (a, b) => {
+			  document.write(a + " " + b);
+			  };
+			  myfun(20,20); 
+			  
+		 //IIFE function
+                  (function  () {
+				         var a = 10;
+                         document.write(a);
+                              })();	
+         /* object 
+           		var fees ={};
+                fees["rahul"] = 100;
+                fees.sumit = 200;
+				fees.rohan = 300;
+				fees["super man"] = 400;
+				// document.write(fees["super man"]);
+				//fees.total = function(){return(100+200);};
+				//document.write(fees.total()); 
+		//literal object
+            	var zer = {sumit:100,rahul:200,total: function(){return(100+200)}};
+				document.write(zer.total()); 
+				
+				
+		// factory function
+             function mobile(model_no){
+                     return {
+                             model: model_no,
+                             price: function (){
+							 return "price is RS.3000";
+							 }
+							 };
+							 }
+							 var samsung = mobile("galaxy");
+							 var nokia = mobile("3310")
+							 document.write(samsung.model + " " +samsung.price() + "<br>");
+							 document.write(nokia.model + " " + nokia.price())
+		
+
+		//constructer
+		       function mobile(model_no){
+			     this.model ="model_no";
+				 this.memory =4;
+				 this.color = 'white';
+				 }
+				 var samsung = new mobile('galaxy');
+				 var nokia = new mobile(3310);
+				 //for(var specs in nokia){
+				     document.write(Object.keys(nokia));  
+		//prototype			 
+				 
+             var mobile = function(model_no){
+			     this.model = model_no;
+				 this.price = 3000;
+				 };
+				 var samsung = new mobile('galaxy');
+				 var nokia = new mobile('3310');
+				 //classname.prototype.key = 'value';
+				 mobile.prototype.color = 'white';
+				 document.write(samsung.color);
+				 document.write(nokia.color);
+				 console.log(samsung);
+				 console.log(nokia); 
+				 
+				 
+				 
+		// prototype inheritance
+		        //supar class
+                 var mobile = function(){
+                	this.a = 10;
+				  }
+			      mobile.prototype.z = 30;	
+				  //sub class
+				  var samsung = function(){
+				  mobile.call(this);
+				  this.b = 20;
+				  }
+				  //p inheritance
+				  samsung.prototype = Object.create(mobile.prototype);
+				  samsung.prototype.constructor = samsung;
+				  
+				  samsung.prototype.z = 50;
+				 var s = new samsung();
+				 var m = new mobile();
+				  document.write(m.a + "<br>");
+				  document.write(m.b+ "<br>");
+				  document.write(m.z + "<br>");
+				  
+				 document.write(s.z + "<br>"); 
+				 
+				 
+		//multi level inheritance
+                 var mobile = function(){
+				 this.a = 10;
+				 }
+				 
+				 mobile.prototype.z = 30;
+				 
+				 var samsung = function(){
+				   mobile.call(this);
+				   this.b = 20;
+				   }
+				   var galaxy = function(){
+				   samsung.call(this);
+				   this.c = 100; }
+				   samsung.prototype = Object.create(mobile.prototype);
+				   samsung.prototype.constructor = samsung;
+				   galaxy.prototype = Object.create(samsung.prototype);
+				   galaxy.prototype.contructor = galaxy;
+				   
+				   var m = new mobile();
+				   var s = new samsung();
+				   var g = new galaxy();
+				   
+				   document.write("galaxy object can acccess <br>");
+				   document.write("mobile A: " + g.a + " <br>");
+				   document.write("samsung B:" + g.b + "<br>");
+				   document.write("mobile prototype z:" + g.z + "<br>");
+				   document.write("galaxy c: " + g.c + "<br> <br>");
+				   document.write("samsung object can acccess <br>");
+				   document.write("mobile A: " + s.a + " <br>");
+				   document.write("samsung B:" + s.b + "<br>");
+				   document.write("mobile prototype z:" + s.z + "<br>");
+				      document.write("galaxy c: " + s.c + "<br> <br>");
+				   document.write("mobile object can acccess <br>");
+				   document.write("mobile A: " + m.a + " <br>");
+				   document.write("samsung B:" + m.b + "<br>");
+				   document.write("mobile prototype z:" + m.z + "<br>");
+				      document.write("galaxy c: " + m.c + "<br> <br>");   
+					  
+		// class declaration
+		       class Mobile{
+			      constructor() {
+				     this.a = 12;
+					 this.show = function () {
+					     return "instance member";
+						 };
+					}
+					display() {
+					  return "prototype Member"
+					  }
+					}
+				var nokia = new Mobile();
+				document.write(nokia.show());
+		//class expression 
+                 var mobile1 = class mobile2{
+				  constructor(model_no){
+				   this.model = model_no;
+				   }
+				  showbar() {
+				      return this.model + "price rs 3000" ;}
+					  };
+					  var lg = new Mobile1('note4');
+					  document.write(lg.showbar()); 
+
+	// class inheritance				 
+			class father{
+			   constractor(){
+			     this.money = 10000;
+				 }
+			 showfmoney(){
+			    return this.money + " father money <br>";
+				}
+				}
+			class son extends father{
+			 constructor(money) {
+			     super(money);
+			 
+		         }
+			 showsmoney(){
+			    return "son money";
+				}
+				}
+			 var s = new son();
+			document.write(s.showfmoney());
+			document.write(s.showsmoney());   
+	  // array
+	        
+	         var stu = ["hello","spark"]
+			 document.write(stu[1]);
+			 document.write("<br>" + stu.length + "<br>");
+			 
+			 
+	//for loop gor array
+	         var geek = ["rahul","jay",56,"smit"];
+			 
+			
+			 for (let i =0; i<geek.length; i++) {
+			 
+			     document.write(geek[i] + "<br>");
+			 }
+	//	for of loop	
+		for(let value of geek){
+		   document.write(value + "<br>")}	
+		 
+	  //input in array	
+             var elm = prompt(" enter your elements: ");
+			 var geek = [];
+			 
+			 for(let i=0; i<=elm; i++){
+			 geek[i] = prompt("enter your values:");
+			 }
+			 
+			 for(let value of geek){
+			    document.write(value + "<br>");
+			 } */
+			 
+			 
+	//2d array		 
+		       /*  var geek = new Array([], []);
+				        for(var i =0; i<2; i++){
+                       
+                           for(var j=0; j<3; j++){
+                                 document.write(geek[i][j] + " ");
+                                 }
+                        document.write("<br>")	
+                       }	*/
+					 
+	// 2d
+                var geek = []; 
+                 var rows = 4;
+				 var cols = 3;
+				 {
+				 for(var i = 0; i< rows; i++){
+				     for(var j = 0; j<cols; j++)
+					document.write(geek[i][j] + " ");
+                    document.write(i + " " + j + "|");
+					}
+					document.write("<br>");	 
+				}
+				
+				
+</script>
+</body>
+</html>

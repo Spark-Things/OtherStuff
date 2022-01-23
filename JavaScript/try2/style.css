@@ -1,0 +1,240 @@
+*{
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+#albar{
+  float: left;
+  background-color: rgb(30, 33, 34);
+  width: 100%;
+  overflow: hidden;
+}
+#albar a{
+  color: white;
+  font-size: 17px;
+  float: right;
+  padding: 10px;
+}
+
+#header {
+  color: rgb(243, 243, 243);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.767);
+   background-image: url(autocad.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+  text-align: center;
+  background-blend-mode: overlay;
+  padding: 10%;
+  padding-left: 6%;
+  padding-right: 2%;
+} 
+
+#navbar {
+  width: 100%;
+  overflow:auto;
+  background-color: rgb(48, 46, 46);
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover,.dropdown:hover .dropbtn{
+  background-color: brown;
+  color: black;
+}
+.searchbar {
+  text-align: center;
+   width: 50%;
+   height: 40px;
+   margin-left: 20%;
+   margin-top: 10px;
+   margin-bottom: 25px;
+   background-color:rgb(48, 46, 46);
+   border-radius: 50px;
+   border: silver;
+   }
+#contai {
+  overflow: visible;
+  float: left;
+  padding: 25px;
+  padding-left: 40px;
+  height: 1000px;
+  background-color: rgb(39, 38, 37);
+}
+#maincon {
+  float: left;
+  padding: 20px; 
+  background-color: snow;
+  width: 70%;
+  border-radius: 50px;
+  margin-right: 10px;
+
+}
+.abm{
+  float: right;
+   width: 25%;
+   height: 400px;
+   padding: 20px;
+  background-color: coral;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+#popost{
+  float: right;
+  width: 25%;
+  margin-top: 15px;
+  height:max-content;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: cadetblue;
+  border-radius: 25px;
+}
+.popu{
+  width: 100%;
+  height: 150px;
+  background-color: cornsilk;
+  border-radius: 25px;
+  margin-top: 10px;
+}
+.popu p{
+  float: right;
+  width: 40%;
+  height: 130px;
+  padding: 10px;
+  font-size: 40%;
+  margin-right: 10px;
+  margin-top: 10px;
+  background-color: rgb(50, 80, 50);
+  border-radius: 25px;
+}
+
+.left {
+  float: left;
+   width: 98%;
+   height:max-content;
+   background-color: rgb(32, 32, 32);
+   border-radius: 5px;
+   margin-left: 10px;
+   margin-right: 20px;
+}
+.image{
+  overflow:visible;
+  float: left;
+   height: 75%;
+   width: 45%;
+   padding: 10px;
+   border-radius: 2px;
+   margin: 15px;
+   margin-top: 40px;
+   border-radius: 25px;
+}
+.discri {
+    float: right;
+    height: 75%;
+    width: 45%;
+    background-color: rgb(32, 32, 32,.6);
+    margin: 10px;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: start;
+}
+.discri lable{
+   font-size: 14px;
+  color:rgb(185, 102, 43);
+}
+.discri p{
+   font-size: 20px;
+}
+/*------------------------------ Aboutus--------------------------*/
+#aboutus{
+  float: left;
+  width: 100%;
+  height:max-content;
+  padding: 25px;
+  background-color: gray;
+  
+}
+.imgc{
+  float: left;
+  width: 70%;
+  height: 32%;
+  background-color: rgb(66, 66, 66);
+   border-radius: 5px;
+  }
+  #aboutus p{  float: right;
+    width: 50%;
+    height:max-content;
+    padding: 20px;
+    font-size: 70%;
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+  }
+  #details{
+    float: right;
+    width: 20%;
+    height:max-content;
+    padding: 25px;
+    margin-left:110px;
+    background-color: rgb(44, 44, 43);
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .content {
+    padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/*--------------------------------- Dropdown menu ----------------------------------------*/
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  display: none;
+  position:fixed;
+  background-color: #2e2d2d;
+  width:max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media screen and (max-width: 900px) {
+  .left{
+    width: 500px;
+  }
+  #aboutus{
+    width: 500px;
+  }
+  #ppandd{
+    padding-top: 50px;
+  }
+  }

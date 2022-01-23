@@ -1,0 +1,53 @@
+<html>
+<head>
+     <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <style>
+	input { display: block;}
+
+.module--shipping-label-template {
+  height:100mm;
+  width:150mm;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 20px 20px 20px rgba(0,0,0,0.05);
+  background: red;  
+}
+	</style>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+<div class="module--shipping-label-template">
+<div>
+  <h3>Sender information</h3>
+  <label for="sender-name">Name
+    <input id="sender-name" placeholder="John Doe"></label>
+  <label>Address
+  <input id="sender-address-first" placeholder="122 Baker Street">
+    <input id="sender-address-second" placeholder="London, United Kingdom">
+  </label>
+  <label>Phone
+  <input id="sender-phone" placeholder="1234 5678">
+  </label>
+</div>
+<div>
+  <h3>Receiver information</h3>
+  <label for="receiver-name">Name
+  <input id="receiver-name" placeholder="John Doe">
+  </label>
+  <label>Address
+  <input id="receiver-address-first" placeholder="122 Baker Street">
+  <input id="receiver-address-second" placeholder="London, United Kingdom">
+  </label>
+  <label>Phone
+  <input id="receiver-phone" placeholder="1234 5678">
+  </label>
+</div>
+<div>
+  <h3>Package details</h3>
+  <input id="ship-date" type="date">
+  <input id="tracking-number" placeholder="324321">
+  <input id="weight" placeholder="weight">
+</div>
+  <button class="generate-pdf">Generate shipping label</button>
+</div>
+<svg id="barcode"></svg>

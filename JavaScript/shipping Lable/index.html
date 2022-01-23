@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+     <style>
+       body{
+         font-family:Verdana, Geneva, Tahoma, sans-serif;
+       }
+        #shipping-lable{
+          height: 100mm;
+          width: 150mm;
+          padding: 20px;
+          margin: 0 auto;
+          box-shadow: 20px 20px 20px rgba(0,0,0,0.05);
+          background-color: aquamarine;
+          border: 1px solid black;
+        }
+        input{
+          display:block;
+          border: 1px solid white;
+          width: 100%;
+          height: 15px;
+          margin: 3px;
+        }
+        div{width: max-content;}
+
+     </style>
+   <div id="shipping-lable">
+       <div style="float: left; margin: 15px;">
+         <span>Sender Information</span><hr>
+         <label>Name : <input type="text" ></label>
+         <label>Address: <input type="text"></label>
+         <label>Mobile no: <input type="text"></label>
+       </div>
+         
+       <div style="float: left; margin: 15px;margin-left: 100px;">
+        <span>Reciver Information</span><hr>
+        <label>Name : <input type="text" ></label>
+        <label>Address: <input type="text"></label>
+        <label>Mobile no: <input type="text"></label>
+      </div>
+
+      <div style="float: left; margin: 15px;">
+        <span>Packege Details</span><hr>
+        <input type="date"></label>
+        packging-ID<input type="text">
+        weight<input type="text">
+      </div>
+    </div>
+    <button style="float: left; margin: 15px;" onclick="window.print()">Print</button>
+</body>
+</html>

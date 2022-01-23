@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head><title>adv 2</title></head>
+<body>
+     <button type="button" id="newwin"> new win</button>
+     <button type="button" id="bur"> blur </button>
+     <button type="button" id="focus"> focus </button>
+     <button type="button" id="prin">print</button>
+     <button type="button" id="mvbtn">move</button>
+     <button type="button" id="rz">resize window</button>
+       <p id="myp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, nostrum? Reiciendis deserunt inventore quam ipsa sunt debitis quo enim quasi, quisquam eum. Amet ipsa veritatis consequatur pariatur sint! Amet, id! Illo rem, ratione qui obcaecati aut delectus, quibusdam voluptatem fugit odit, dolores atque laborum quis accusamus voluptas perspiciatis doloremque illum distinctio! Illum, aspernatur quod provident corporis voluptatibus harum quisquam vero doloremque, error, mollitia animi cum deserunt aut ullam. Doloribus magni voluptatem, ipsa neque vero excepturi nemo adipisci ad illo accusamus quasi dolore in quas amet dolorem impedit ea ratione esse! Tempora dolor qui similique voluptate deleniti, ex magnam. Animi, aspernatur.</p>
+    <!-- <button type="button" id="scl">scroll to top</button> -->
+    <button type="button" id="sbut"> stop hacking </button>
+    <div id="md"></div>
+
+    <form action="" name="myf">
+           username : <input type="text" name="myuname" id="un"> </br>
+           Password : <input type="password" name="mypass" id="psd"> </br>
+           <input type="button" name="set" id="set" value="set cookies">
+           <input type="button" name="get" id="get" value="get cookies">
+    </form>
+    <hr>
+    <hr>
+    <form action="" name="yf">
+      username : <input type="text" name="yuname"> </br>
+      Password : <input type="password" name="ypass"> </br>
+      <input type="submit" name="ysbtn" value="submit">
+</form>
+<script>
+         var x;
+        function f(){
+
+           x.window.focus();
+        }  
+
+        function b(){
+          window.blur();
+        }
+
+        function nw(){
+
+          x = window.open("","", "height : 900px, width : 900px");
+        }
+        function pr(){
+
+          window.print();
+        }
+
+        function mw(){
+
+         x.window.moveBy(800,800);
+         x.focus();
+        }
+
+        function rww()
+        {
+
+          //x.resizeBy(500,500);
+           x.resizeTo(500,500);
+          x.focus();
+        }
+          
+///////////////////////// timeout //////////////////////////////////////
+       setTimeout(() => {
+
+        document.getElementById("myp").style = 'color: grey';
+       }
+        
+       ,2500);
+       
+       // function st(){
+
+         // window.scrollTo({top: 0, behavior: 'smooth'});}
+
+        document.getElementById("newwin").addEventListener("click",nw);
+        document.getElementById("bur").addEventListener("click",b);
+        document.getElementById("focus").addEventListener("click",f);
+        document.getElementById("prin").addEventListener("click",pr);
+        document.getElementById("mvbtn").addEventListener("click",mw);
+        document.getElementById("rz").addEventListener("click",rww);
+
+
+        var re = window.location.hash = '#team';
+        console.log(re);
+
+      ///  window.location.assign();
+
+//////////////////////////////////////////// time interval //////////////////////////////////
+          var intervelID = setInterval(() => {
+            document.getElementById("md").textContent += " 01101 ";
+          }, 20 );
+
+          function shc(){
+
+            clearInterval(intervelID);
+          }
+           document.getElementById("sbut").addEventListener("click",shc);
+
+ /////////////////////////// window event /////////////////////////////////////////////          
+           window.addEventListener("load",shc);
+
+
+  /////////////////////////////// form event  //////////////////////////////////////
+
+         var mform = document.myf.elements[0];
+         console.log(mform);
+         mform.value = "smit";
+         
+         var sec = document.forms['yf'];
+         console.log(sec);
+
+ ////////////////////////////////////////// form validation ////////////////////////////////////////////////////
+
+       //var cc = document.cookie = "username=smit ; max-age= " + 60 * 60 * 24 * 10 + "; path=/; expires= thu, 28-01-2021 09:00:00 UTC";
+      //alert(cc);
+
+
+
+  //////////////////////////////////////////// cookies event /////////////////////////////////////////////////    
+       function sc(){
+
+         document.cookie = "name=" + document.myf.un.value;
+         document.cookie = "password=" + document.myf.psd.value; 
+       }
+       function gc(){
+
+         var ca = document.cookie.split=";";
+
+         for(i = 0; i < ca.length; i++) 
+         {
+           var va = document = ca[i].split("=");
+           
+         }
+
+         console.log(ca);
+       }
+       document.getElementById("set").addEventListener("click",sc);
+       document.getElementById("get").addEventListener("click",gc);
+
+////////////////////////////////////////////// local storagr & session storage ////////////////////////////////////
+
+       window.localStorage.setItem('username', 'spark');
+       console.log(localStorage.key(0));
+       console.log(localStorage.getItem('username'));
+
+       sessionStorage.setItem('password', 'spark1234');
+
+/////////////////////////////////////////////////// strict mode ///////////////////////////////////
+         
+       //  "use strict";
+       
+
+//////////////////////////////// execption handling /////////////////////////////////
+
+   try{
+
+     add();
+     document.write("skiped tag");
+   }
+
+   catch(e){
+
+     console.log("nahi");
+   }
+
+   finally{
+    document.write("finnaly block executed");
+   }
+
+  /////////////////////////////////////// navigator object ///////////////
+  
+   console.log(navigator.userAgent);
+      
+    if(navigator.cookieEnabled){
+
+       document.write("cookie enabled");
+    } else{
+      document.write("cookie disebled");
+    }
+ //////////////////////////////////  callback ////////////////////////////////////////////////
+     
+      function sm(a){
+
+         console.log(" i am sm function " + a);
+      }
+      function it(sp){
+        var a = 101;
+       sp(a);
+      }
+      it(sm);
+
+  ///////////////////////////// map matheod /////////////////////////
+  
+    var sss = [10, 20 , 30 , 40 , 50];
+    var nss = sss.map(function(value){
+        value++;
+        console.log(value);
+        });
+
+  //////////////////////////////// ARRAY DESTRUCTURING  /////////////////////////////////////////////////
+
+     var a = ["javascript", "sixmonths", "geekyshows","fyuiggsfgyusfgyu", "efyudsvgyugui"];
+     
+     function sh([course, time, tutor, ...rest]){
+     console.log(course);
+     console.log(tutor);
+     console.log(rest);
+     }
+     sh(a);
+      var {A,B} = { A:10, B:20 };
+     console.log(A);
+
+</script>
+
+
+
+</body>
+</html>

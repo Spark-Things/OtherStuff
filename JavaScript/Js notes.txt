@@ -1,0 +1,98 @@
+JavaScripts important notes:
+
+Getting inner Html:: 
+                    
+					 document.getElementByid("id").innerHTML = "Value";
+
+Getting css style change :: 
+                            
+							onClick='document.getElementById("id").style.font-size = "Value";'
+
+Use method in Onclick :: 
+
+                           onclick= "document.getElementById("id")"
+
+ making function add inilize it ::
+    
+	   fuction myfuction() {
+	      document.getElementById("demo4").innerHTML = " Change it "
+	   }
+	   
+  intilize in HTML :: 
+  
+  
+       <p id="demo4" onClick="myfunction()"></p>
+
+ Alertbox ::
+        
+     window.alert(5 + 4);
+
+ Console log ::
+
+     console.log("Deep")
+	 
+initilize in fuction :::
+       
+	  HTML: <p id="demo6"></p> 
+	   
+     let x = fun( 5, 4);
+    document.getElementById("Demo6").innerHTML = x
+     function fun(l1,l2) {
+	    
+		 return l1*l2
+	 }
+
+String Methods::::  
+      
+     stringname.length();
+               .Replace("/old/g","New")
+                                          /""/i = use for lowecase font
+                                          /""/g = use for every matches in string
+               .toUpperCase()
+               .toLowerCase()
+               .trim() = remove spaces in string
+   
+    let VaribleName = 5 
+	variableName.padStart(4,0);           output = 0005   
+	variableName.padEnd(4,0);
+	
+	
+Template litrals::
+                     ${...}	
+	
+	
+	
+	 
+Methods :::	
+             (120 + 3).toString();  //returns 123
+			  x.toFixed(2) //return 0.00
+			  
+			  Number(new Date("2017-09-30"));
+			  
+
+Array :::::::
+            
+            const cars = [ "saab" , "volvo" , "BMW"];
+
+   addding in array ::: cars[3] = "Audi"			
+   
+   
+   
+           for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+                                                    }
+													
+Array Methods::::::::
+          let Array = [""]  
+             Array.push()     //add Elements in the End of the Array
+             Array.pop()      // delete from end
+             Array.shift()    // delete First Element in the Array
+             Array.unshift()  // Add elements at the First
+
+Array Sort :::::::::::::::::::::::::::::::
+           
+             Array.sort(function(a, b){return a - b});
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            
+             Array.map();			

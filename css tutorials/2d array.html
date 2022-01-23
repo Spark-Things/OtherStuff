@@ -1,0 +1,90 @@
+<html>
+<head><title>2d array </title></head>
+<body>
+<script>
+      /* var smit = [];
+	   var rows = 2;
+	   var cols = 3;
+	     for(var i = 0; i < rows; i++){
+		     smit[i] = [];
+		 }
+	   
+	     for(var i = 0; i< rows; i++){
+		    for(var j = 0; j< cols; j++){
+			
+			smit[i][j] = prompt("enter name: ");
+			}
+			document.write("<br>");
+			}
+			
+		    for(var i = 0; i< rows; i++){
+		    for(var j = 0; j< cols; j++){
+			
+			 document.write(i + " " + j + smit[i][j] + " | ");
+			}
+			document.write("<br>");
+			}  */
+			
+			var spark = ["rahul" , "dilu" ,"brij", " faishu"];
+			var spark2= ["neel"];
+			var spark3 = ["swami"];
+			var new_spark = spark.concat(spark3,spark2);
+			//var fuck = new_spark.join(" / ");
+			//var zeen = new_spark.slice(1 , 3);
+			//document.write(zeen);
+			//var result = Array.isArray(spark);
+			//document.write("<br>" + result);
+			//new_spark.splice(3, 1,"tapa","yash");
+			//document.write(new_spark);
+			//var search = new_spark.indexOf("tapa");
+			//document.write("<br>" + search);
+		  new_spark.fill("lenovo", 4, 6);
+		  new_spark.unshift("fri","ch");
+		  new_spark.shift();
+		  new_spark.pop();
+		  document.write(new_spark);
+		  
+
+	//string interpolation
+
+         var str = "spark";
+		 document.write(`${str} hello`); 
+		 
+	//NaN() 
+          
+         var a = 10;
+		 var b = "hello";
+		 if(isNaN(a))
+		 {document.write("legel number");}
+		 else
+		 {document.write("illegel number" + "<br>");}
+		 
+		 document.write(a.toString(16) + "<br>");
+		 
+	//math w3scool.com	 
+		  var x = Math.floor(Math.random()*10000);
+		  document.write(x + "<br>");
+		  
+	//date()
+           document.write(new Date(2002,1,13,10,00,45,0) + "<br>");	
+		   
+		   var bith = new Date("2015-06-21");
+		   document.write(bith + "<br>");
+		   
+	// date format
+
+         var tarikh = new Date();
+		 document.write(formatDate(tarikh) + "<br>");
+		 document.write(tarikh.toGMTString() + "<br>");
+		 function formatDate(pd){
+		     var date = pd.getDate();
+			 var month = pd.getMonth();
+			 month++;
+			 var year = pd.getFullYear();
+			 return date + " - " + month + " - " + year;
+			 
+			 }
+		   
+</script>
+</body>
+</html>

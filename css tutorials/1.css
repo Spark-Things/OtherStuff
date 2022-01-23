@@ -1,0 +1,28 @@
+#one{ color: red; font-size: 24px;}
+h1{ color: blue; font-size:4em; direction:rtl; text-decoration:overline;text-indent:50px;text-transform: uppercase;}
+p{text-align: justify; letter-spacing: 10px; line-height:10px;text-shadow:1px 1px black;white-space:wrap; text-align-last:left;word-wrap:break-word;word-break:keep all;}
+html {
+    background: url(D:\LOGO.jpg) center fixed no-repeat;
+	background-size: cover;
+	}
+.sp{vertical-align: super;}
+.sb{vertical-align: sub;}	
+ul{ list-style-image: url('D\wp1.jpg');
+   list-style-type: square;
+   list-style:roman inside ;}
+ table , th ,td {
+       border: solid,blue;
+	   border-collaspe: collasped ;}
+	   caption {caption-side:bottom;}
+	   table{empty-cells: hide;
+	          table-layout: auto;
+			  table-width:100%;
+			  background-color:grey;}
+		td, th {padding: 10px;}	  }
+	   
+	p.p1{visibility: hidden;}   
+	a:link{ color:red;}
+	a:visited{ color: purpule;}
+	a:hover: { color: blue;}
+	a:active { color: green;}
+    li:nth-child(odd) {color: red;}	

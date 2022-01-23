@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADSJS</title>
+</head>
+<body>
+    <h1> WE are LEARING ADV JS </h1>
+    <h2 id="geek" class="lk">helllo</h2>
+    <p id="geek">hellow <span> SPARK </span>
+     <p class="jk"> are you</p>
+     <p class="jk"> jhdhg</p>
+    </p>
+    <p class="jk">hii</p>
+
+    <div id="show"> hello all
+          <h4 id="ap"> append items</h4>
+         
+    </div>
+    <div id="show2">bye all</div>
+
+      <div id="apend">
+
+      </div>
+    <section id="mysec">
+
+    <div id="xx">
+      <ul id="myul">
+         <li>dilu</li>
+         <li id="ff">deep</li>
+         <li>neel</li>
+         <li>brij</li>
+
+      </ul>
+    </div>
+
+    </section>
+
+<script>
+  var s = document.getElementById("geek");
+ 
+  console.log(s);
+
+  var m = document.body.getElementsByTagName("p").length;
+   
+   for(let i =0; i< m; i++){
+         var r = document.getElementsByTagName("p")[i];
+         document.write(r + "<br>");
+         console.log(r);
+  
+  console.log(r);
+   }
+  var z = document.getElementById("geek").getElementsByTagName("span").length;
+ 
+  console.log(z);
+
+  var c = document.getElementById("geek").getElementsByClassName("jk").length;
+  
+  console.log(c);
+
+  var q = document.querySelector("#geek");
+  document.write(q);
+  console.log(q);
+
+   var qa = document.querySelectorAll("p , h1");
+   document.write(qa);
+   console.log(qa);
+
+   var att = document.querySelectorAll("div[id]")
+   document.write(att);
+   console.log(att);
+    
+   var a = document.getElementById("geek");
+   document.write("<br>" + a.attributes[0].name + "<br>");
+   document.write(a.attributes[1].value  + "<br>");
+   document.write(a.attributes.length);
+
+ 
+
+   // text node 
+     var ntn = document.createTextNode(" text node created");
+     console.log(ntn);
+
+  // comment create
+
+     var ntc = document.createComment("comment created");
+     document.write(ntc.textContent);
+
+   // create document frangment 
+   
+     var df = document.createDocumentFragment();
+     console.log(df);   
+
+    // apppend child nodes 
+       
+        var pr = document.getElementById("mysec");
+        var cd = document.getElementById("ap");
+        mysec.appendChild(ap);
+        console.log(mysec);
+    // creaate element and append
+      var tg = document.getElementById("show2");
+
+      tg.appendChild(document.createElement("h2"));
+      console.log(tg);
+
+   //element append
+   
+     var ntnode = document.createTextNode("hello i am tenet");
+     var nenode = document.createElement("h4");
+       nenode.appendChild(ntnode);
+       console.log(nenode);
+
+       var cxd = document.getElementById("show");
+       cxd.appendChild(nenode);
+       document.write("<br>" + cxd.textContent);  
+       
+       
+     // document fragment
+         
+        var df = document.createDocumentFragment();
+
+        var hnn = document.createElement("h3");
+
+        var pnod = document.createElement("p");
+        
+        hnn.textContent = "h3 f js";
+        pnod.textContent = "p f js"; 
+
+        df.appendChild(hnn);
+        df.appendChild(pnod);
+
+         console.log(df);
+
+        var exp = document.getElementById("apend");
+        
+        exp.appendChild(df);
+
+        console.log(exp);
+
+ ///insertbefore    
+       
+         var pn = document.getElementById("myul");
+         var bn = document.createElement("li");
+            bn.textContent = "divyansh";
+         var rf = document.getElementById("ff");
+         pn.insertBefore(bn, ff);
+         console.log(pn);
+// insertadjacentHTML
+
+        var pn = document.getElementById("show");
+        var h = document.getElementById("ap");
+
+        var myhtml = "<span> hello i am hacker <span>"
+        h.insertAdjacentHTML('beforebegin', myhtml);
+        console.log(pn);
+
+///////////  //////////  ////////////////////////
+    var u = document.getElementById("myul");
+    var f = document.getElementById("ff");
+
+     var dnn = u.cloneNode(true);
+     var vbn = document.getElementById("show2");
+
+     vbn.appendChild(dnn);
+     console.log(vbn);
+     u.innerHTML="<li>fjfj</li><li>gdhsjkdk</li><li>cccc</li>"
+      // u.outerHTML="<p>para</p>"
+      var rc = document.createElement("li");
+      rc.textContent = "spark";
+      u.removeChild(u.firstElementChild.nextElementSibling);
+    // u.replaceChild(rc,f);
+
+    console.log(u.innerHTML);
+    console.log(u.innerText.length);
+
+    console.log(f.firstChild.data);
+   ///  f.firstChild.deleteData("");
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+   var xx = document.getElementById("show");
+   xx.setAttribute('style','background-color: red;'); 
+   xx.style.fontStyle = "italic";
+   console.log(xx);   
+    
+</script>    
+</body>
+</html>

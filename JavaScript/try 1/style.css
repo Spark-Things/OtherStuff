@@ -1,0 +1,541 @@
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*----------------- dropdown menu -------------------------------*/
+.dropdown-content { 
+  margin-left: 16%;
+  margin-top: 1%;
+  display: none;
+  position:absolute;
+  background-color: #f9f9f9;
+  max-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  right: 0;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.dropdown:hover .dropdown-content {
+  overflow:visible;
+  display: block;
+}
+/*--------------------- side navagation -------------------*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav .closebtn {
+  position:absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 30px;
+}
+.snbar {
+  float: left;
+  padding-left: 10px ;
+
+}
+
+/* ----------------------------------- navabar --------------------------*/
+#navbar {
+  overflow: visible;
+  background-color: #ffffff;
+  padding: 100px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  border-radius: 0 0 50px 50px;
+}
+
+#bgimg{
+  height: 100%;
+  background-image: url(re.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ .nem {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  display: block;
+  background-color: rgb(64, 30, 255);
+  color: rgb(255, 255, 255);
+}
+
+#navbar a.active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+#navbar-right {
+  width: 55%;
+  float: right;
+}
+/*-----------------------------------------searchbar ------------------------------*/
+/* Set a style for all buttons */
+ #serchbar,#gobtn {
+  float: left;
+  color: black;
+  text-align: center;
+  margin-left: 7px;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 5px;
+  border-radius: 25px;
+}
+.searchbutton {
+  padding-left: 10px;
+  margin-top: 8px;
+}
+/*------------------------------ login tab ---------------------*/
+/* Full-width input fields */
+#dislogin {
+  background-color: #4CAF50;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  height: 47px;
+  width: 24px;
+  margin-left: 20px;
+  padding: 5px 18px;
+  line-height: 25px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 25px;
+}
+#dislogin:hover {
+  opacity: 0.8;
+}
+/*login button */
+#login {
+  background-color:#4CAF50;
+  width: 20%;
+  text-align: center;
+  color: white;
+  padding: 10px 18px;
+  line-height: 25px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left:38%;
+  border-radius: 25px;
+}
+.container {
+  padding: 10px 16px;
+  padding-bottom: 90px;
+  border-radius: 0 0 25px 25px;
+}
+/* container items */
+#container input[type=text], input[type=password] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+/* Extra styles for the cancel button */
+.cancelbtn,#signup{
+  background-color: #d10c0ce3;
+  color: white;
+  padding: 7px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-left: 33%;
+  border-radius: 25px;
+}
+#signup{
+  background-color: black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  float: right;
+  text-align: center;
+
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: visible; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+.username{
+  float:left;
+}
+
+.psw{
+  margin-right:39%;
+  float: right;
+}
+.tabcontact {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+/*--------------- about tab -------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+#about-section {
+  background-image: url(re.jpg);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #312d2dc2;
+  color: rgb(255, 255, 255);
+}
+
+.column {
+  float: left;
+  height: 35%;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  height: 40%;
+  background-color: red;
+  opacity: 0.9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  border-radius: 50px;
+}
+.austab {
+  height: 15%;
+  padding: 0 16px;
+}
+
+.austab::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+.contactbtn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 150px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+.contactbtn:hover {
+  background-color: #555;
+}
+/*------------------------------------------ main bg -------------------------------- */
+* {box-sizing: border-box;}
+/* Slideshow container */
+#mainslidecontainer {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  background-color: rgb(48, 46, 46,0.5);
+  background-blend-mode: overlay;
+  display: none;
+  border-radius: 0 0 25px 25px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 3%;
+  width: 400px;
+  height: 600px;
+  margin-top: -22px;
+  padding: 150px;
+  padding-top: 300px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  border-radius: 0 30% 30% 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 30% 0 0 30%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(7, 7, 7, 0.1);
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+/*------------------------------------------- Scroll bar -------------------------------*/
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
+}
+
+/*--------------------------------------------------- section contents -------------------------------*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.seccon {
+  padding: 45px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding-left: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.seccon button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #213f21;
+  border-radius: 25px;
+}
+
+.seccon img {
+  display: block;
+  height: 600px;
+  width: 100%;
+  border-radius: 50px;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 18px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+  .dropdown {
+      float: none;
+  }
+  .search-container {
+    float: none;
+  }
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    span.psw {
+      display: block;
+      float: none;
+   }
+   .column {
+    width: 100%;
+    display: block;
+  }
+  .cancelbtn, .signupbtn {
+    width: 100%;
+ }
+ .text {font-size: 11px}
+ .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+ 

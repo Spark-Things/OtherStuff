@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+   <div id="navbar">
+      <div id="logo" style="width: 130px;float: left;margin-left: 50px;"><img src="16.png" style="width: 125px; height: 100px;border-radius: 25px;padding: 5px;"></div>
+      <div id="right_navbar">
+      <a href="index.html" class="hvr"> Home </a>
+      <a href="#slide2" class="hvr"> Product </a>
+      <a href="#aboutus-page" class="hvr"> About </a>
+      </div>
+     </div> 
+   <div id="mainpage">
+      <div id="image-page">
+         <div class="container">
+        <div class="mySlides">
+     <img src="c.jpg" style="width:80%; padding: 20px;margin-left: 50px;">
+   </div>
+ 
+   <div class="mySlides">
+     <img src="oneplus-9r.jpg" style="width:80%;padding: 20px;margin-left: 50px;">
+   </div>
+     
+   <a class="prev" onclick="plusSlides(-1)">❮</a>
+   <a class="next" onclick="plusSlides(1)">❯</a>
+ 
+   <div class="row" style="padding-left: 20px;padding-right: 20px;background-color: rgba(15, 14, 14, 0.514);margin-top: 10px;border-radius: 0 0 20px 20px;">
+     <div class="column">
+       <img class="demo cursor" src="c.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+     </div>
+     <div class="column">
+       <img class="demo cursor" src="oneplus-9r.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+     </div>
+   </div>
+ </div>
+ 
+ <script>
+ var slideIndex = 1;
+ showSlides(slideIndex);
+ 
+ function plusSlides(n) {
+   showSlides(slideIndex += n);
+ }
+ 
+ function currentSlide(n) {
+   showSlides(slideIndex = n);
+ }
+ 
+ function showSlides(n) {
+   var i;
+   var slides = document.getElementsByClassName("mySlides");
+   var dots = document.getElementsByClassName("demo");
+   var captionText = document.getElementById("caption");
+   if (n > slides.length) {slideIndex = 1}
+   if (n < 1) {slideIndex = slides.length}
+   for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+   }
+   for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";
+   dots[slideIndex-1].className += " active";
+   captionText.innerHTML = dots[slideIndex-1].alt;
+ }
+ </script>
+      </div>
+      <div id="discription-page">
+           <a id="productname"> Oneplus 9r makes more sense than oneplus 9 in oneplus 9 series </a><hr>
+           <a style="padding: 10px;"><b>Price :<span style="font-size: 26px;">39,999/-</b></span></a>
+      </div>
+   </div>
+</body>
+</html>

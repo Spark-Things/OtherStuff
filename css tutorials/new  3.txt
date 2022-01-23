@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript tutorials </title></head>
+<body>
+  <script>			 
+		         var geek = [
+		                      ["rahul", "dell", 10],
+					            ["sonam", "hp", 20],
+					            ["smit",  "lenovo", 70]
+					
+					   
+					];
+				        for(var i =0; i<3; i++){
+                       
+                           for(var j=0; j<3; j++){
+                                 document.write(geek[i][j] + " ");
+                                 }
+                        document.write("<br>")	
+                       }	
+					 
+					   
+</body>
+</html>

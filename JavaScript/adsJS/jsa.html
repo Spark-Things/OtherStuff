@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <button id="mybtn"> click here </button>
+  <div id="one" style="width: 200px; height: 200px; background-color: darkgreen;">
+       <div id="two" style="width: 70px; height: 70px; background-color: yellow;"></div>  
+  </div>
+
+
+    name : <input type="text" id="name"></br>
+<script>
+    /*function disp()
+    {
+      alert(" legion performance mode");
+    }
+    //document.getElementById("mybtn").onclick = disp; 
+    function link(e){
+            this.style.backgroundColor = 'red';
+            e.stopPropogation();
+            e.preventDEfault();
+            }
+    var btn = document.getElementById("mybtn");
+    btn.addEventListener("mouseover",link,false);*/
+   //  function di1(e)
+  //   { console.log(e.type);
+  //  }
+ /*   var d1 = document.getElementById("one");
+    var d2 =document.getElementById("two");
+   d2.addEventListener("mousedown", di1 ,false);
+   d2.addEventListener("mouseup", di1 ,false);
+   d2.addEventListener("click", di1 ,false);
+   d2.addEventListener("dblclick", di1 ,false);
+   d2.addEventListener("mouseenter", di1 ,false);
+   d2.addEventListener("mouseleave", di1 ,false);
+   d2.addEventListener("mouseover", di1 ,false);
+   d2.addEventListener("mouseout", di1 ,false);
+   d2.addEventListener("mousemove", di1 ,false);
+   d2.addEventListener("contextmenu", di1 ,false); */
+  
+///////////////////////////   //// focus event
+   var txt = document.getElementById("name")
+   function fe(e)
+   {     
+       txt.style.backgroundColor = 'red';
+   }    
+   function be(e)
+   {     
+       txt.style.backgroundColor = 'white';
+
+   }
+    txt.addEventListener("focus",fe);
+    txt.addEventListener("blur",be);
+
+
+//////////////////////// key event ///////////////////////    
+   function ke(z){
+
+     console.log(z.type + ' ' + z.keyCode + ' ' + String.fromCharCode(z.keyCode));
+
+   }
+    txt.addEventListener("keydown",ke,false);
+    txt.addEventListener("keypress",ke,false);
+    txt.addEventListener("keyup",ke,false);
+
+///////////////////////////////////////// window object //////////////
+   
+   var oh = window.outerHeight;
+   console.log(oh);
+
+   var iw = window.innerWidth;
+   console.log(iw);
+
+/////////////////////////////////////////// confirm method    //////////
+  // var cr = confirm(" are you ok");
+   /* if(cr)
+    { 
+       document.write(" be happpy ");
+    } else {
+
+      document.write(" don't be sad ");
+    } */
+
+
+//////////////////////////////////////////// window open //////////////////////
+      
+      var newwin = window.open("","_blank","height=400, width=400", "toolbars=no");
+         newwin.document.write("<h1>spark</h1>");
+       var newwin = print();
+         function bar(){
+
+          // newwin.print();
+           newwin.close();
+         }
+         document.getElementById("mybtn").addEventListener("click",bar);
+
+   //////////////////////////////// print  ////  
+
+</script>
+</body>
+</html>

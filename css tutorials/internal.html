@@ -1,0 +1,195 @@
+<html>
+      <head> 
+	  <title>CSS tutorials</title>
+	  <style>
+	    /* #one{ color: blue; font-size: 24px;} 
+		 p.red{ color: #FF0000;}
+		 p.look{ font-size: 60px;}
+		 .algn{text-align: center;} 
+		 p,h1{ color: blue; font-size: 24px;
+		        font-family: Arial,serif,"Times new roman";} 
+		 body{background-color: grey;}
+		 body{background-image: url(D:\wp1.jpg),url(D:\LOGO.jpg);
+		      background-repeat: no-repeat,no-repeat;
+			  background-position: center left,right top;
+			  background-attachment: fixed,fixed
+			 body{ background: url(D:\wp1.jpg) no-repeat center left fixed;
+			                     url(D:\LOGO.jpg) no-repeat right top fixed;
+			       background-size:400px,500px;
+				   background-origin: content-box;
+				   background-clip: padding-box} 
+				   
+				   p{ 
+				   font-family: arial;
+				   font-stretch: condensed;
+				   font-style: italic;
+				   font-variant: small-caps;
+				   font-weight: bold;
+				   font: bold small-caps 20px serif ;
+				   }
+				   h1{font weight:bolder}
+				   
+				   p {
+				      border-style: solid;
+					  border-width: 5px medium;
+					  border-color: blue red green yellow; 
+					  height: 150px;
+					  width: 200px;
+					  border: solid blue 1px;
+					  overflow : auto;
+					  }
+					img{ position: relative;
+					      left: 50px;
+						  top: 50px;
+						  float: left;
+						  margin-right: 50px;}
+					#maindiv{ position: fixed;
+					     height:500px;
+						 width:500px;
+						 background-color:red;
+						 color: blue;}
+					#img2{  image-align: right;
+					        height: 40px;
+					        width:40px;} 
+					 * {color: yellow;}	
+				
+					#maindiv > h1{ color: yellow;}
+					#maindiv h1 + p { color : green;} */
+					
+					p:first-child {color: red;}
+					p:last-child {color : blue;}
+					
+					p:first-of-type {color: red;}
+					p:last-of-type {color : blue;}
+					
+					p::before{content: open-quote;}
+					p::after{content: close-quote;
+					         content: url();
+							 color: green;} 
+							 
+					p::first-letter{color: red;}
+					p::first-line{color: blue;}	
+					h1::selection{color: yellow;}
+					
+					h1{ margin-left: 10%;
+					    padding: 2% 1% 3% 4%;
+					    background-color: grey;
+						min-width: 200px;
+						max-height: 300px;
+						outline-style: solid;
+						outline-color: Yellow;
+						outline-width: 10px;
+						outline-offset: 2px;}
+							 
+					#maindiv{width: 50%;
+					         box-shadow: 20px 20px 10px blue, 30px 30px 20px green ;
+							 box-sizing: border-box;}
+                       a { display: block;
+					       width: 100px;
+						   height: 100px;
+						   background-color: yellow;
+					   }	
+					#img2{ opacity: 0.7;
+					       border-radius: 20px;
+						   box-shadow: 20px 10px 20px;
+						   margin-bottom: 20px;
+						   margin-left: 50px;}
+					.D1{ height:100px;
+					     width:200px;
+						 box-sizing: border-box;
+						 font-family: arial;
+						 text-align: center;
+						 background-color: rgba(192,192,64,0.2);
+						 border-left-style: solid;
+						 border-left-width: medium;
+						 border-left-color: red;
+						 border-left: thin solid blue;
+						 border-right: medium solid yellow;
+						 border-top: medium solid red;
+						 border-bottom: medium solid green;
+					     border-radius: 20px 10px;}
+						   .D1:hover{ opacity: 0.5;
+						              filter: blur(1px);
+									  filter: brightness(50%);
+									  filter: contrast(75%);
+									  filter: drop-shadow(10px 10px 20px red);
+									  }
+				.D1:hover{ width: 500px; height: 500px;
+				                background-color: grey;
+								cursor:crosshair;}
+				div { transition-property:all;
+                       transition-duration: 2s;
+                       trasition-timing-function:cubic-bezier(.78,.2,1,.14);
+					   trasition-delay: 1s;
+					   background-color: cyan;
+					  } 
+				#two{ columns: 200px 4;
+				      column-rule-style: solid;
+					  column-rule-width: 5px;
+					  column-rule-color: yellow; 
+					  column-gap: 20px;}
+	  </style>
+	  </head>
+	  <body>
+	     <div class="D1">
+		 <h2>HEY</h2>
+		  <h3>SPARK</h3>
+		 </div> 
+	   <div id="maindiv">
+	     <h1> HEADING </h1>
+		 <p>i am paragraph</p>
+		 
+		 <div> 
+		 <h1>i am paragraph</h1>
+		 </div>
+		 		 <img id="img2" src="D:\LOGO.jpg"></img>
+	  </div>
+	 
+	  <h1 class="algn"> I am heading</h1>
+	  <p class="red look">i am first paragraph</p>
+	  <p class="red algn">i am second paragraph</p>
+	  <p id="two">i am paragraph sdchvdsvhg gdsuihkadk hkhsdhl glhkdkgkadgh gukla glgk ghg ghlgil uvjhdbl gllhasgd gegugbciu fpboiub fipfuwr uwfiueb fyruibguywu fgugrri oygrpy eryuu eyuryu rf ghjfvsb jhgdshbkjfh  wefehf uhfhu nhfoiii ionr</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p>
+	  <p>i am paragraph</p> 
+	  <a href="##"> click here </a>
+	  <div>
+	       <h1>hiii</h1>
+	       <p>this is 1st child of first div</p>
+		    <p>i am paragraph</p>
+			 <p>i am paragraph</p>
+			 <h1>bye</h1>
+	  
+	  
+	  
+	  </div>
+	  <div>
+	       <p>this is 1st child of second div</p>
+		    <p>i am paragraph</p>
+			 <p>i am paragraph</p>
+	  
+	  
+	  
+	  </div>
+	  <div>
+	       <p>this is 1st child of third div</p>
+		    <p>i am paragraph</p>
+			 <p>i am paragraph</p>
+	  
+	  
+	  
+	  </div>
+	  
+	  </body>
+	  <html>
