@@ -1,0 +1,6 @@
+Apollo React
+graphQL
+mongoDb Atlas
+Mongoose
+bcryptjs
+jsonwebtoken

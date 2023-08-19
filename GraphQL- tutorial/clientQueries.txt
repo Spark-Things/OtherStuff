@@ -1,0 +1,56 @@
+------------------------------------------------------------------------------------------
+query getAllusers{
+   users{
+    _id
+    firstname
+    email
+  }
+}
+
+-----------------------------------------------------------------
+
+query getAllQuotes{
+  quotes{
+    name
+    by
+  }
+}
+
+----------------------------------------------------------------------
+query getUserByid{
+  User(_id:"254"){
+    _id
+    firstname
+    lastname
+    email
+    quotes{
+      name
+    }
+  }
+}
+-----------------------------------------------------------------------
+query getQuoteByUser{
+  iquote(by:"528"){
+    name
+    by
+  }
+}
+
+---------------------------------------With Variable -----------------------------
+
+query getQuoteByUser($Quoteby: ID!){
+  iquote(by:$Quoteby){
+    name
+    by
+  }
+}
+
+-------------------------------------------------------------------------------------
+mutation createUser($newUser: Userinput!){
+  user : SignupUserDummy(newUser: $newUser){
+    _id
+    firstname
+    lastname
+    email
+  }
+}
